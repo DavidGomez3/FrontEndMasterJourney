@@ -1,13 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Vite + TS</title>
   </head>
+
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <div class="sidenav" id="sidenav">
+      <a
+        href="javascript:void(0)"
+        class="closeNav"
+        onclick="closeNav()"
+      >
+        Cerrar nav
+      </a>
+      <ul>
+        <li>
+          <a href=""
+            >Día 2
+            <ul>
+              <li><a href="">Día 2.1</a></li>
+              <li><a href="">Día 2.2</a></li>
+              <li><a href="">Día 2.3</a></li>
+            </ul></a
+          >
+        </li>
+        <li><a href="">Día 3</a></li>
+        <li><a href="">Día 4</a></li>
+        <li><a href="">Día 5</a></li>
+      </ul>
+      <span onclick="openNav()">open</span>
+    </div>
+    <div class="main">hola</div>
   </body>
 </html>

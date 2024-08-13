@@ -14,10 +14,15 @@
 ul,
 li {
   list-style-type: none; /* Quita los puntos de la lista */
+  margin: 0px;
+  padding: 0px;
+  color: #ffff;
+  display: block;
 }
 
+
+
 body {
-  font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   margin: 0;
@@ -30,16 +35,24 @@ body {
 .sidenav {
   height: 100%;
   width: 200px;
-  /* position:fixed; */
   z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: greenyellow;
+  background-color: #1b1b1b;
   overflow-x: hidden;
-  padding-top: 1em;
+  padding: 1em;
 }
 
 .main{
   /* margin-left: 200px; */
   flex-grow: 1;
+}
+
+.nav_item{
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 0.5em;
+}
+
+.nav_item:hover{
+  background-color: red;
 }

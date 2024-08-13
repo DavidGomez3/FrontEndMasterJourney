@@ -17,7 +17,13 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    
+    /* Alias configuration */
+    "baseUrl": ".", 
+    "paths": {
+      "@estilos/*": ["src/styles/*"]
+    }
   },
   "include": ["src"]
 }

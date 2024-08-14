@@ -16,11 +16,8 @@ li {
   list-style-type: none; /* Quita los puntos de la lista */
   margin: 0px;
   padding: 0px;
-  color: #ffff;
   display: block;
 }
-
-
 
 body {
   font-size: 16px;
@@ -36,23 +33,59 @@ body {
   height: 100%;
   width: 200px;
   z-index: 1;
-  background-color: #1b1b1b;
+  background-color: #101828;
   overflow-x: hidden;
   padding: 1em;
 }
 
-.main{
+.main {
   /* margin-left: 200px; */
   flex-grow: 1;
 }
 
-.nav_item{
+.nav_item {
   display: block;
   text-decoration: none;
   color: white;
-  padding: 0.5em;
+  padding: 0.5em 0.75em;
+  border-radius: 0.5em;
+  font-size: 14px;
+  font-weight: 500;
 }
 
-.nav_item:hover{
-  background-color: red;
+.nav_item:hover {
+  background-color: #1d2939;
+  cursor: pointer;
+}
+
+.multiple_items svg {
+  width: 14px;
+  margin-left: auto;
+}
+.multiple_items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.child_list {
+  margin-left: 6px;
+}
+
+details > .container_child_list {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+}
+
+/* Estilo cuando el <details> está abierto */
+details[open] > .container_child_list {
+  max-height: 105px;
+}
+summary .nav_item_icon {
+  transition: transform 0.3s ease;
+}
+
+details[open] summary .nav_item_icon {
+  transform: rotate(180deg); /* Rota el icono 180 grados */
 }

@@ -3,19 +3,19 @@
 
 <head>
   <link rel="stylesheet" href="/src/styles/index.css" />
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite + TS</title>
+  <title>vite + ts</title>
 </head>
 
 <body>
   <nav class="sidenav">
     <ul>
-      <li><a class="nav_item" href="#">Inicio</a></li>
-      <li><a class="nav_item" href="#">Servicios</a></li>
+      <li><a class="nav_item" href="#main">inicio</a></li>
+      <li><a class="nav_item" href="#">servicios</a></li>
       <li>
-        <details>
+        <details name="test">
           <summary class="nav_item multiple_items">
             Más
             <svg class="nav_item_icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -31,10 +31,27 @@
             </ul>
           </div>
         </details>
+        <details name="test">
+          <summary  class="nav_item multiple_items">
+            Más
+            <svg class="nav_item_icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </summary>
+          <div class="container_child_list">
+            <ul class="child_list">
+              <li><a class="nav_item" href="#">Acerca de</a></li>
+              <li><a class="nav_item" href="#">Contacto</a></li>
+              <li><a class="nav_item" href="#">Soporte</a></li>
+            </ul>
+          </div>
+        </details>
+
       </li>
     </ul>
   </nav>
-  <div class="main">ahora ya no es hola</div>
+  <div class="main" id="main">ahora ya no es hola</div>
 </body>
 
 </html>

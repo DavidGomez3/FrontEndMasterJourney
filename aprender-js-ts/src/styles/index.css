@@ -36,10 +36,12 @@ body {
   background-color: #101828;
   overflow-x: hidden;
   padding: 1em;
+  border-right: 2px solid #475467;
 }
 
 .main {
   /* margin-left: 200px; */
+  background-color: #101828;
   flex-grow: 1;
 }
 
@@ -53,8 +55,13 @@ body {
   font-weight: 500;
 }
 
+.nav_item:active {
+  background-color: red;
+}
+
 .nav_item:hover {
   background-color: #1d2939;
+  color: #b7b7ff;
   cursor: pointer;
 }
 
@@ -88,4 +95,8 @@ summary .nav_item_icon {
 
 details[open] summary .nav_item_icon {
   transform: rotate(180deg); /* Rota el icono 180 grados */
+}
+
+.nav_item:target{
+  background-color: #475467;
 }

@@ -9,6 +9,9 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 ul,
@@ -35,31 +38,29 @@ body {
   z-index: 1;
   background-color: #101828;
   overflow-x: hidden;
-  padding: 1em;
+  padding: 2em 1em 1em 1em;
   border-right: 2px solid #475467;
 }
 
 .main {
   /* margin-left: 200px; */
   background-color: #101828;
+  padding: 2em 4em 0em 4em;
   flex-grow: 1;
 }
 
-.nav_item {
+.nav_item, .multiple_items{
   display: block;
   text-decoration: none;
   color: white;
   padding: 0.5em 0.75em;
   border-radius: 0.5em;
-  font-size: 14px;
+  font-size: 1em;
   font-weight: 500;
 }
 
-.nav_item:active {
-  background-color: red;
-}
 
-.nav_item:hover {
+.nav_item:hover, .multiple_items:hover{
   background-color: #1d2939;
   color: #b7b7ff;
   cursor: pointer;
@@ -87,7 +88,7 @@ details > .container_child_list {
 
 /* Estilo cuando el <details> está abierto */
 details[open] > .container_child_list {
-  max-height: 105px;
+  max-height: 120px;
 }
 summary .nav_item_icon {
   transition: transform 0.3s ease;
@@ -97,6 +98,20 @@ details[open] summary .nav_item_icon {
   transform: rotate(180deg); /* Rota el icono 180 grados */
 }
 
-.nav_item:target{
+.nav_item:target {
   background-color: #475467;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  margin-bottom: 0.5em;
+  line-height: 1;
+}
+
+.active{
+  background-color: #1d2939;
+  color: #b7b7ff;
 }

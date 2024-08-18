@@ -7,7 +7,7 @@ export default defineConfig({
       '@estilos': path.resolve(__dirname, 'src/styles'),
     },
   },
-  plugins: [react()],
+
   server: {
     port: 3000
   }

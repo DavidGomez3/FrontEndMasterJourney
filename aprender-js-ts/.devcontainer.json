@@ -1,0 +1,21 @@
+{
+    "forwardPorts": [
+        3000
+    ],
+    "portsAttributes": {
+        "3000": {
+            "label": "React App",
+            "onAutoForward": "openPreview"
+        }
+    },
+    "updateContentCommand": "npm install",
+    "postAttachCommand": "npm run dev",
+    // Configure tool-specific properties.
+    "customizations": {
+        "codespaces": {
+            "openFiles": [
+                "index.html"
+            ]
+        }
+    }
+}

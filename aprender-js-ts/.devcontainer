@@ -1,9 +1,0 @@
-{
-    'name': 'mi proyecto', 
-    'image': 'node: 18-alpine',
-    'postCreatedCommand': 'npm install',
-    'forwardPorts': [3000],
-    'features': {
-        'git':'enable'
-    }
-}

@@ -1,6 +1,6 @@
 :root {
   font-size: 16px;
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
   line-height: 1.5;
   font-weight: 400;
 }
@@ -9,9 +9,17 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: "Public Sans", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+}
+
+h1,
+h2,
+h3,
+p,
+a,
+summary {
+  font-family: "Public Sans", sans-serif;
 }
 
 ul,
@@ -22,6 +30,9 @@ li {
   display: block;
 }
 
+pre {
+  margin: 0;
+}
 body {
   font-size: 16px;
   line-height: 1.5;
@@ -30,6 +41,7 @@ body {
   display: flex;
   height: 100vh;
   width: 100vw;
+  overflow-x: auto;
 }
 
 .sidenav {
@@ -40,6 +52,8 @@ body {
   overflow-x: hidden;
   padding: 2em 1em 1em 1em;
   border-right: 2px solid #475467;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 
 .main {
@@ -47,9 +61,13 @@ body {
   background-color: #101828;
   padding: 2em 4em 0em 4em;
   flex-grow: 1;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ffff #101828;
 }
 
-.nav_item, .multiple_items{
+.nav_item,
+.multiple_items {
   display: block;
   text-decoration: none;
   color: white;
@@ -59,8 +77,8 @@ body {
   font-weight: 500;
 }
 
-
-.nav_item:hover, .multiple_items:hover{
+.nav_item:hover,
+.multiple_items:hover {
   background-color: #1d2939;
   color: #b7b7ff;
   cursor: pointer;
@@ -111,7 +129,41 @@ h1 {
   line-height: 1;
 }
 
-.active{
+.active {
   background-color: #1d2939;
   color: #b7b7ff;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 500;
+  color: white;
+  line-height: 1;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+p {
+  margin: 0 0 1.5em;
+  color: #d0d5dd;
+  font-size: 1em;
+  text-wrap: pretty;
+}
+
+aside {
+  height: 100%;
+  width: 200px;
+  z-index: 1;
+  background-color: #101828;
+  overflow-x: hidden;
+  padding: 2em 1em 1em 1em;
+  border-left: 2px solid #475467;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.codigo-container {
+  border-radius: 0.5em;
+  overflow: hidden;
+  margin-bottom: 2em;
 }

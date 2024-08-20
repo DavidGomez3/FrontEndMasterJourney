@@ -15,7 +15,6 @@
 
   <link rel="stylesheet" href="./node_modules/highlight.js/styles/default.css">
   <script src="./node_modules/highlight.js/lib/index.js"></script>
-  <script type="module" src="src/test.mjs" defer></script>
 </head>
 
 <body>
@@ -68,12 +67,18 @@
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam repudiandae nesciunt expedita possimus ipsa
       libero non earum ad sed saepe impedit rerum recusandae deleniti velit tempore quod ipsam, quis laboriosam.</p>
     <div class="codigo-container">
-      <pre id="codigo"><code class="language-javascript"></code></pre>
+      <pre id="codigo">
+        <code class="language-javascript codigo"></code>
+        <div id="lista"></div>
+      </pre>
     </div>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam repudiandae nesciunt expedita possimus ipsa
       libero non earum ad sed saepe impedit rerum recusandae deleniti velit tempore quod ipsam, quis laboriosam.</p>
   </div>
-  <aside><p>hola que tal esto tiene que ser un aside</p></aside>
+  <aside>
+    <p>hola que tal esto tiene que ser un aside</p>
+  </aside>
+  <script type="module" src="src/test.mjs" defer></script>
 </body>
 
 </html>

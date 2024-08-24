@@ -1,10 +1,38 @@
-/* Elementos de raiz o por defecto */
+/* Variable definition */
 :root {
+  /* Fonts */
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
-}
+  /* Colors */
+  /* Background colors */
+  --bg-light: #f6f6fe;
+  --bg-primary: #4b32c3;
+  --bg-dark: #101828;
 
+  /* Fonts */
+  --text-white: #ffffff;
+  --text-light-gray: #d0d5dd;
+  --text-light-purple: #b7b7ff;
+  --text-gray: #9d9d9d;
+  --text-blue: #088cdb;
+  --text-dark-gray: #505050;
+  --text-primary: #4b32c3;
+  /* Fill colors */
+  --fill-white: #ffffff;
+  --fill-light-gray: #d0d5dd;
+  --fill-light-purple: #b7b7ff;
+  --fill-dark-blue: #1d2939;
+  --fill-black: #000000;
+  /* Border */
+  --border-light-purple: #b7b7ff;
+  --border-gray: #667085;
+  --border-dark-gray: #475467;
+
+  /* Variables de elementos del sistema */
+  --header-heigth: 60px;
+}
+/* Default elements */
 *,
 *::before,
 *::after {
@@ -21,6 +49,36 @@ a,
 summary {
   font-family: "Public Sans", sans-serif;
   text-wrap: balance;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 700;
+  color: var(--text-white);
+  margin: 0;
+  margin-bottom: 0.5em;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 500;
+  color: var(--text-white);
+  line-height: 1;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+p {
+  margin: 0 0 1.5em;
+  color: var(--text-light-gray);
+  font-size: 1em;
+  text-wrap: pretty;
+}
+
+code {
+  padding-left: 3.5em !important;
+  width: 100%;
 }
 
 ul,
@@ -40,17 +98,17 @@ pre {
 aside {
   height: 100%;
   width: 200px;
-  background-color: #101828;
+  background-color: var(--bg-dark);
   overflow-x: hidden;
   padding: 2em 1em 1em 1em;
-  border-left: 2px solid #475467;
+  border-left: 2px solid var(--border-dark-gray);
   flex-shrink: 0;
   flex-grow: 0;
 }
 
-/* Disposición */
+/* Layout */
 body {
-  font-size: 16px;
+  font-size: 1em;
   line-height: 1.5;
   margin: 0;
   padding: 0;
@@ -58,12 +116,14 @@ body {
 }
 
 .site-header {
-  border-bottom: 2px solid #475467;
-  background-color: #101828;
+  color: #ffff;
+  border-bottom: 2px solid var(--border-dark-gray);
+  background-color: var(--bg-dark);
   width: 100%;
-  height: 48px;
+  height: var(--header-heigth);
   position: sticky;
   top: 0;
+  padding: 1rem;
 }
 
 .container {
@@ -71,22 +131,22 @@ body {
   grid-template-columns: auto 1fr auto;
   grid-template-rows: auto 1fr;
   width: 100%;
-  height: calc(100vh - 48px);
+  height: calc(100vh - var(--header-heigth));
 }
 .sidenav-left {
-  background-color: #101828;
+  background-color: var(--bg-dark);
   overflow-x: hidden;
   padding: 2em 1em 1em 1em;
-  border-right: 2px solid #475467;
+  border-right: 2px solid var(--border-dark-gray);
   grid-column: 1;
   grid-row: 2;
   width: 250px;
 }
 .content {
-  background-color: #101828;
+  background-color: var(--bg-dark);
   padding: 2em 4em 0em 4em;
   scrollbar-width: thin;
-  scrollbar-color: #ffff #101828;
+  scrollbar-color: var(--fill-white) var(--bg-dark);
   grid-column: 2;
   grid-row: 2;
   height: 100%;
@@ -99,26 +159,29 @@ body {
   grid-row: 2;
   width: 250px;
 }
+
+/* Nav styles */
 .nav_item,
 .multiple_items {
   display: block;
   text-decoration: none;
-  color: white;
+  color: var(--text-white);
   padding: 0.5em 0.75em;
   border-radius: 0.5em;
   font-size: 1em;
   font-weight: 500;
+  transition: background-color ease-in-out 100ms;
 }
 
 .nav_item:hover,
 .multiple_items:hover {
-  background-color: #1d2939;
-  color: #b7b7ff;
+  background-color: var(--fill-dark-blue);
+  color: var(--text-light-purple);
   cursor: pointer;
 }
 
 .multiple_items svg {
-  width: 14px;
+  width: 1em;
   margin-left: auto;
 }
 .multiple_items {
@@ -150,37 +213,12 @@ details[open] summary .nav_item_icon {
 }
 
 .nav_item:target {
-  background-color: #475467;
-}
-
-h1 {
-  font-size: 3em;
-  font-weight: 700;
-  color: white;
-  margin: 0;
-  margin-bottom: 0.5em;
-  line-height: 1;
+  background-color: var(--border-dark-gray);
 }
 
 .active {
-  background-color: #1d2939;
-  color: #b7b7ff;
-}
-
-h2 {
-  font-size: 2em;
-  font-weight: 500;
-  color: white;
-  line-height: 1;
-  margin-top: 1.5em;
-  margin-bottom: 0.75em;
-}
-
-p {
-  margin: 0 0 1.5em;
-  color: #d0d5dd;
-  font-size: 1em;
-  text-wrap: pretty;
+  background-color: var(--fill-dark-blue);
+  color: var(--text-light-purple);
 }
 
 .codigo-container {
@@ -192,12 +230,7 @@ p {
 #lista {
   position: absolute;
   top: 0;
-  color: white;
+  color: var(--text-white);
   padding-top: 1em;
   left: 24px;
-}
-
-code {
-  padding-left: 3.5em !important;
-  width: 100%;
 }

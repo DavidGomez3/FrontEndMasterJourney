@@ -31,6 +31,7 @@
 
   /* Variables de elementos del sistema */
   --header-heigth: 60px;
+  --aside-width: 250px;
 }
 /* Default elements */
 *,
@@ -96,6 +97,7 @@ pre {
 }
 
 aside {
+  box-sizing: border-box;
   height: 100%;
   width: 200px;
   background-color: var(--bg-dark);
@@ -140,7 +142,7 @@ body {
   border-right: 2px solid var(--border-dark-gray);
   grid-column: 1;
   grid-row: 2;
-  width: 250px;
+  width: var(--aside-width);
 }
 .content {
   background-color: var(--bg-dark);
@@ -157,12 +159,13 @@ body {
 .sidenav-rigth {
   grid-column: 3;
   grid-row: 2;
-  width: 250px;
+  width: var(--aside-width);
 }
 
 /* Nav styles */
-.nav_item,
+.nav-item,
 .multiple_items {
+  margin-bottom: 0.2rem;
   display: block;
   text-decoration: none;
   color: var(--text-white);
@@ -173,7 +176,7 @@ body {
   transition: background-color ease-in-out 100ms;
 }
 
-.nav_item:hover,
+.nav-item:hover,
 .multiple_items:hover {
   background-color: var(--fill-dark-blue);
   color: var(--text-light-purple);
@@ -204,15 +207,15 @@ details > .container_child_list {
 details[open] > .container_child_list {
   max-height: 120px;
 }
-summary .nav_item_icon {
+summary .nav-item_icon {
   transition: transform 0.3s ease;
 }
 
-details[open] summary .nav_item_icon {
+details[open] summary .nav-item_icon {
   transform: rotate(180deg); /* Rota el icono 180 grados */
 }
 
-.nav_item:target {
+.nav-item:target {
   background-color: var(--border-dark-gray);
 }
 

@@ -4,7 +4,7 @@ import "highlight.js/styles/atom-one-dark.css";
 hljs.highlightAll();
 
 //Colores de navegación
-let navItems = document.querySelectorAll(".nav_item");
+let navItems = document.querySelectorAll(".nav-item");
 console.log(navItems.length);
 navItems.forEach((item) => {
   item.addEventListener("click", clicNavegacion);

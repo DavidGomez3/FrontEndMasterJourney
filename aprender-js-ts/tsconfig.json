@@ -22,7 +22,8 @@
     /* Alias configuration */
     "baseUrl": ".", 
     "paths": {
-      "@estilos/*": ["src/styles/*"]
+      "@styles/*": ["src/styles/*"],
+      "@icons/*": ["src/assets/icons/*"]
     }
   },
   "include": ["src"]

@@ -1,9 +1,11 @@
 /* Variable definition */
 :root {
   /* Fonts */
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.5;
   font-weight: 400;
+  --font: "Public Sans", sans-serif;
+  --font-decorated: "Quattrocento", serif;
   /* Colors */
   /* Background colors */
   --bg-light: #f6f6fe;
@@ -30,8 +32,11 @@
   --border-dark-gray: #475467;
 
   /* Variables de elementos del sistema */
-  --header-heigth: 60px;
+  --header-heigth: 70px;
   --aside-width: 250px;
+}
+html {
+  scroll-behavior: smooth;
 }
 /* Default elements */
 *,
@@ -40,41 +45,55 @@
   box-sizing: border-box;
   font-optical-sizing: auto;
   font-style: normal;
+  scrollbar-width: thin;
+  scrollbar-color: var(--fill-white) var(--bg-dark);
 }
 
 h1,
 h2,
-h3,
+h3 {
+  font-family: var(--font-decorated);
+  color: var(--text-white);
+  text-wrap: balance;
+  line-height: 1;
+}
+
+span:not(pre span),
 p,
 a,
+li,
 summary {
   font-family: "Public Sans", sans-serif;
-  text-wrap: balance;
+  text-wrap: pretty;
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 3rem;
   font-weight: 700;
   color: var(--text-white);
   margin: 0;
-  margin-bottom: 0.5em;
+  margin-bottom: 1.5rem;
   line-height: 1;
 }
 
 h2 {
-  font-size: 2em;
-  font-weight: 500;
+  font-size: 2rem;
+  font-weight: 600;
   color: var(--text-white);
   line-height: 1;
-  margin-top: 1.5em;
-  margin-bottom: 0.75em;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
 }
 
+h3 {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 1;
+}
 p {
-  margin: 0 0 1.5em;
   color: var(--text-light-gray);
-  font-size: 1em;
-  text-wrap: pretty;
+  font-size: 1rem;
 }
 
 code {
@@ -126,6 +145,7 @@ body {
   position: sticky;
   top: 0;
   padding: 1rem;
+  z-index: 3;
 }
 
 .container {
@@ -147,8 +167,6 @@ body {
 .content {
   background-color: var(--bg-dark);
   padding: 2em 4em 0em 4em;
-  scrollbar-width: thin;
-  scrollbar-color: var(--fill-white) var(--bg-dark);
   grid-column: 2;
   grid-row: 2;
   height: 100%;
@@ -205,7 +223,7 @@ details > .container_child_list {
 
 /* Estilo cuando el <details> está abierto */
 details[open] > .container_child_list {
-  max-height: 120px;
+  max-height: fit-content;
 }
 summary .nav-item_icon {
   transition: transform 0.3s ease;
@@ -236,4 +254,60 @@ details[open] summary .nav-item_icon {
   color: var(--text-white);
   padding-top: 1em;
   left: 24px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-header {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.label {
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.tablecontent-link {
+  margin-bottom: 0.5rem;
+}
+
+.tablecontent-link a {
+  color: var(--text-white);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.tablecontent-link a:hover {
+  color: var(--text-light-purple);
+}
+
+.tablecontent-H1 {
+}
+
+.tablecontent-H2 {
+  margin-left: 1.2rem;
+}
+
+.tablecontent-H3 {
+  margin-left: 2.4rem;
+}
+
+.header-icon {
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 100%;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }

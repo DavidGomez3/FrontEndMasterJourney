@@ -1,13 +1,13 @@
 import CodeBlockWriter from "code-block-writer";
 import hljs from "highlight.js";
-import "highlight.js/styles/atom-one-dark.css";
+import "highlight.js/styles/github-dark.min.css";
 hljs.highlightAll();
-const { gsap } = require("gsap/dist/gsap");
 //Colores de navegación
 let navItems = document.querySelectorAll(".nav-item");
 navItems.forEach((item) => {
   item.addEventListener("click", clicNavegacion);
 });
+
 
 function clicNavegacion(event) {
   navItems.forEach((element) => {
